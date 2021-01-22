@@ -34,7 +34,7 @@ def digits_to_words(input_string):
         if elem in dic:
             result.append(dic[elem])
 
-    digit_string = " ".join
+    digit_string = " ".join()
     return digit_string
 
 
@@ -79,6 +79,7 @@ def to_camel_case(underscore_str):
             if elem.isalpha():
                 if flag_upper:
                     flag_upper = False
+                    result+=elem.upper()
 
             elif elem == "_":
                 flag_upper = True
@@ -86,8 +87,6 @@ def to_camel_case(underscore_str):
             if elem.isalpha():
                 flag_alpha=True
                 result+=elem
-
-
 
 
     return result
